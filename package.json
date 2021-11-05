@@ -1,0 +1,44 @@
+{
+  "name": "unplugin-svgr",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "source": "./src/index.ts",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    "require": "./lib/index.js",
+    "import": "./lib/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daangn/unplugin-svgr.git"
+  },
+  "author": {
+    "name": "Hyeseong Kim",
+    "email": "tim@daangn.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "tsc --emitDeclarationOnly && nanobundle build --minify=false"
+  },
+  "dependencies": {
+    "@svgr/core": "^5.5.0",
+    "@svgr/plugin-jsx": "^5.5.0",
+    "@svgr/plugin-svgo": "^5.5.0",
+    "runtypes": "^6.5.0",
+    "unplugin": "^0.2.20"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "nanobundle": "^0.0.18",
+    "rollup": "^2.59.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.13",
+    "webpack": "^5.61.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
